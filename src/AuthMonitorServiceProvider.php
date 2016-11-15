@@ -16,11 +16,16 @@ class AuthMonitorServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/views', 'data');
 
         $this->publishes([
-            __DIR__.'/views' => base_path('resources/views/elloringene/authmonitor'),
-            __DIR__.'/models' => base_path('app/Models'),
-            __DIR__ . '/migrations' => $this->app->databasePath() . '/migrations'
-        ]);
+            __DIR__.'/views' => base_path('resources/views/elloringene/authmonitor')
+        ],'views');
 
+        $this->publishes([
+            __DIR__.'/models' => base_path('app/Models')
+        ],'models');
+
+        $this->publishes([
+            __DIR__ . '/migrations' => base_path('database/migrations')
+        ],'migrations');
     }
 
     /**
