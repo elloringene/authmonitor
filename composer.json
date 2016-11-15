@@ -1,0 +1,13 @@
+{
+    "name": "elloringene/authmonitor",
+    "description": "Auth Throttle and Monitor",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "Gene Ellorin",
+            "email": "elloringene@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
