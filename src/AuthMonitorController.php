@@ -3,6 +3,8 @@ namespace EllorinGene\AuthMonitor;
 
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 
 class AuthMonitorController extends Controller
 {
@@ -12,4 +14,11 @@ class AuthMonitorController extends Controller
         echo $data;
     }
 
+    public function login(Request $request){
+
+        
+        if(!Auth::attempt($request->only('email', 'password'))){
+
+        }
+    }
 }
